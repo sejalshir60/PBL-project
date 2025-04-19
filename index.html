@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>India Explorer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Playfair+Display&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background: #fff8f0;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background: url('https://cms.brightsun.co.uk/uploads/17-05-2021-08-47Amazing%20Facts%20Associated%20with%20Popular%20Indian%20Historical%20Places.jpg') center/cover no-repeat;
+      padding: 80px 20px;
+      text-align: center;
+      color: white;
+      font-family: 'Playfair Display', serif;
+      box-shadow: inset 0 0 0 1000px rgba(0,0,0,0.5);
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    header h1 {
+      font-size: 3.5rem;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.4rem;
+    }
+
+    .search-section {
+      background: #fff;
+      padding: 30px 20px;
+      text-align: center;
+    }
+
+    .search-section input {
+      padding: 12px;
+      width: 70%;
+      border: 2px solid #f77f00;
+      border-radius: 8px;
+      font-size: 1rem;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .cards-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 40px 10px;
+      gap: 25px;
+    }
+
+    .state-card {
+      background: white;
+      border-radius: 12px;
+      width: 300px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .state-card:hover {
+      transform: scale(1.04);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+
+    .state-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-bottom: 2px solid #eee;
+    }
+
+    .state-card a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .state-card h2 {
+      color: #0a9396;
+      font-size: 1.5rem;
+      padding: 15px;
+    }
+
+    .state-card p {
+      padding: 0 15px 15px;
+      font-size: 1rem;
+    }
+
+    .features {
+      background: #fef6e4;
+      padding: 50px 20px;
+      text-align: center;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    .features h2 {
+      font-size: 2.3rem;
+      color: #f77f00;
+      margin-bottom: 25px;
+    }
+
+    .features ul {
+      list-style: none;
+      font-size: 1.1rem;
+      line-height: 2;
+    }
+
+    .features ul li a {
+      color: #333;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .features ul li a:hover {
+      color: #f77f00;
+    }
+
+    .user-form {
+      background: #fff3e6;
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    .user-form h2 {
+      font-size: 2rem;
+      color: #f77f00;
+      margin-bottom: 15px;
+    }
+
+    .user-form p {
+      margin-bottom: 30px;
+    }
+
+    .user-form form {
+      max-width: 600px;
+      margin: 0 auto;
+      text-align: left;
+    }
+
+    .user-form label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+    }
+
+    .user-form input,
+    .user-form select,
+    .user-form textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 20px;
+      border: 2px solid #f77f00;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+
+    .user-form button {
+      background: #0a9396;
+      color: white;
+      border: none;
+      padding: 12px 28px;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .user-form button:hover {
+      background: #056865;
+    }
+
+    footer {
+      background: #0a9396;
+      color: #fff;
+      text-align: center;
+      padding: 15px;
+      font-size: 0.9rem;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      .search-section input {
+        width: 90%;
+      }
+    }
+    .contact {
+  background: #eaf4f4;
+  padding: 40px 20px;
+  text-align: center;
+  color: #333;
+}
+
+.contact h2 {
+  font-size: 2rem;
+  color: #0a9396;
+  margin-bottom: 10px;
+}
+
+.contact p {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.contact-info p {
+  font-size: 1.1rem;
+  margin: 5px 0;
+}
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>India Explorer</h1>
+    <p>A Journey Through Time and Culture</p>
+  </header>
+
+  <div class="search-section">
+    <input type="text" id="search" placeholder="🔍 Search for food, clothing, dance, etc..." onkeyup="filterCards()" />
+  </div>
+
+  <div class="cards-container" id="cardsContainer">
+    <div class="state-card">
+      <img src="https://cdn.britannica.com/27/242227-050-48358A10/Mysore-Palace-Mysuru-Karnataka-India.jpg" alt="Karnataka" />
+      <a href="https://karnatakatourism.org/"><h2>Karnataka</h2></a>
+      <p>🏰 Mysore Palace, Yakshagana, Bisi Bele Bath.</p>
+    </div>
+
+    <div class="state-card">
+      <img src="https://thetempleguru.com/wp-content/uploads/2024/12/Dagdusheth-Halwai-Ganpati-Temple-4.jpg" alt="Maharashtra" />
+      <a href="https://www.mtdc.co/en/"><h2>Maharashtra</h2></a>
+      <p>🏛️ Shaniwar Wada, Ganesh Chaturthi, Vada Pav.</p>
+    </div>
+
+    <div class="state-card">
+      <img src="https://www.setmytrip.in/wp-content/uploads/2024/08/245389704_4417029301714461_229262651591278812_n.jpg" alt="Sikkim" />
+      <a href="https://sikkimtourism.gov.in/Public/index"><h2>Sikkim</h2></a>
+      <p>⛩️ Rumtek Monastery, Himalayas, Thukpa & Momos.</p>
+    </div>
+
+    <div class="state-card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKsWaadZorrm4nhrj0JbMq5lsYgqswo_cD9w&s" alt="Jammu & Kashmir" />
+      <a href="https://jk.gov.in/jammukashmir/"><h2>Jammu & Kashmir</h2></a>
+      <p>🏞️ Dal Lake, Pheran, Snow festivals, Kahwa tea.</p>
+    </div>
+
+    <div class="state-card">
+      <img src="https://thrillingtravel.in/wp-content/uploads/2018/11/City-Palace-Udaipur-at-night.jpg" alt="Rajasthan" />
+      <a href="https://www.tourism.rajasthan.gov.in/"><h2>Rajasthan</h2></a>
+      <p>🕌 Forts, Desert Festival, Bandhani textiles.</p>
+    </div>
+
+    <div class="state-card">
+      <img src="https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/17/2d/91.jpg" alt="Kerala" />
+      <a href="https://www.keralatourism.org/"><h2>Kerala</h2></a>
+      <p>🚣 Backwaters, Kathakali, Onam Festival.</p>
+    </div>
+  </div>
+
+  <section class="features">
+    <h2>🌟 Website Features</h2>
+    <ul>
+      <li><a href="https://www.holidify.com/collections/states-in-india">🗺️ State-wise Cultural Profiles</a></li>
+      <li><a href="https://www.mapsofindia.com/maps/">🧭 Interactive Cultural Map</a></li>
+      <li><a href="https://www.google.com/travel/flights?gl=IN&hl=en">🔎 Search and Filter Options</a></li>
+      <li><a href="https://thewanderingcore.com/stories-inspire-for-a-trip-to-india-reasons-to-visit/">📝 User Submissions & Community Stories</a></li>
+      <li><a href="https://www.linguasol.net/multilingual-solution-for-travel-and-tourism/">🌐 Multi-language Support</a></li>
+      <li><a href="https://timesofindia.indiatimes.com/travel/topic/cultural-heritage-tourism/articles">📚 Cultural Blog & Articles</a></li>
+    </ul>
+  </section>
+
+  <section class="user-form">
+    <h2>📜 Share Your Cultural Story</h2>
+    <p>We'd love to hear your traditions, festivals, or family stories. 🌍✨</p>
+    <form id="cultureForm">
+      <label for="name">👤 Your Name:</label>
+      <input type="text" id="name" name="name" required placeholder="e.g., Priya Sharma" />
+
+      <label for="state">🏞️ State / Region:</label>
+      <input type="text" id="state" name="state" required placeholder="e.g., Gujarat" />
+
+      <label for="category">📌 Category:</label>
+      <select id="category" name="category" required>
+        <option value="">--Select--</option>
+        <option value="Food">Food</option>
+        <option value="Festival">Festival</option>
+        <option value="Clothing">Clothing</option>
+        <option value="Art">Art</option>
+        <option value="Custom">Custom / Ritual</option>
+        <option value="Other">Other</option>
+      </select>
+
+      <label for="story">📝 Your Story:</label>
+      <textarea id="story" name="story" rows="5" required placeholder="Describe the tradition, recipe, or experience..."></textarea>
+
+      <button type="submit">📤 Submit Story</button>
+    </form>
+  </section>
+  <section class="contact">
+    <h2>📞 Contact Us</h2>
+    <p>We’d love to connect with you! Reach out for suggestions, feedback, or collaborations.</p>
+    <div class="contact-info">
+      <p><strong>📱 Mobile:</strong> +91-9876543210</p>
+      <p><strong>✉️ Email:</strong> indiaexplorer@email.com</p>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 India Explorer. Preserving culture, one state at a time.
+  </footer>
+
+  <script>
+    function filterCards() {
+      const input = document.getElementById('search').value.toLowerCase();
+      const cards = document.getElementsByClassName('state-card');
+      Array.from(cards).forEach(card => {
+        const content = card.textContent.toLowerCase();
+        card.style.display = content.includes(input) ? 'block' : 'none';
+      });
+    }
+
+    document.getElementById('cultureForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert("Thank you for sharing your story! 🙏");
+      this.reset();
+    });
+  </script>
+</body>
+</html>
+
