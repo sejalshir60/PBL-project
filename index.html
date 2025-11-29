@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,228 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>India Explorer</title>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Playfair+Display&display=swap" rel="stylesheet">
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: 'Open Sans', sans-serif;
-      background: #fff8f0;
-      color: #333;
-      line-height: 1.6;
-    }
-
-    header {
-      background: url('https://cms.brightsun.co.uk/uploads/17-05-2021-08-47Amazing%20Facts%20Associated%20with%20Popular%20Indian%20Historical%20Places.jpg') center/cover no-repeat;
-      padding: 80px 20px;
-      text-align: center;
-      color: white;
-      font-family: 'Playfair Display', serif;
-      box-shadow: inset 0 0 0 1000px rgba(0,0,0,0.5);
-      animation: fadeIn 2s ease-in-out;
-    }
-
-    header h1 {
-      font-size: 3.5rem;
-      margin-bottom: 10px;
-    }
-
-    header p {
-      font-size: 1.4rem;
-    }
-
-    .search-section {
-      background: #fff;
-      padding: 30px 20px;
-      text-align: center;
-    }
-
-    .search-section input {
-      padding: 12px;
-      width: 70%;
-      border: 2px solid #f77f00;
-      border-radius: 8px;
-      font-size: 1rem;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-
-    .cards-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      padding: 40px 10px;
-      gap: 25px;
-    }
-
-    .state-card {
-      background: white;
-      border-radius: 12px;
-      width: 300px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      overflow: hidden;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .state-card:hover {
-      transform: scale(1.04);
-      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-    }
-
-    .state-card img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-      border-bottom: 2px solid #eee;
-    }
-
-    .state-card a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    .state-card h2 {
-      color: #0a9396;
-      font-size: 1.5rem;
-      padding: 15px;
-    }
-
-    .state-card p {
-      padding: 0 15px 15px;
-      font-size: 1rem;
-    }
-
-    .features {
-      background: #fef6e4;
-      padding: 50px 20px;
-      text-align: center;
-      animation: fadeIn 2s ease-in-out;
-    }
-
-    .features h2 {
-      font-size: 2.3rem;
-      color: #f77f00;
-      margin-bottom: 25px;
-    }
-
-    .features ul {
-      list-style: none;
-      font-size: 1.1rem;
-      line-height: 2;
-    }
-
-    .features ul li a {
-      color: #333;
-      text-decoration: none;
-      transition: color 0.3s ease;
-    }
-
-    .features ul li a:hover {
-      color: #f77f00;
-    }
-
-    .user-form {
-      background: #fff3e6;
-      padding: 50px 20px;
-      text-align: center;
-    }
-
-    .user-form h2 {
-      font-size: 2rem;
-      color: #f77f00;
-      margin-bottom: 15px;
-    }
-
-    .user-form p {
-      margin-bottom: 30px;
-    }
-
-    .user-form form {
-      max-width: 600px;
-      margin: 0 auto;
-      text-align: left;
-    }
-
-    .user-form label {
-      display: block;
-      margin-bottom: 8px;
-      font-weight: bold;
-    }
-
-    .user-form input,
-    .user-form select,
-    .user-form textarea {
-      width: 100%;
-      padding: 12px;
-      margin-bottom: 20px;
-      border: 2px solid #f77f00;
-      border-radius: 8px;
-      font-size: 1rem;
-    }
-
-    .user-form button {
-      background: #0a9396;
-      color: white;
-      border: none;
-      padding: 12px 28px;
-      border-radius: 8px;
-      font-size: 1rem;
-      cursor: pointer;
-      transition: background 0.3s ease;
-    }
-
-    .user-form button:hover {
-      background: #056865;
-    }
-
-    footer {
-      background: #0a9396;
-      color: #fff;
-      text-align: center;
-      padding: 15px;
-      font-size: 0.9rem;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 2rem;
-      }
-
-      .search-section input {
-        width: 90%;
-      }
-    }
-    .contact {
-  background: #eaf4f4;
-  padding: 40px 20px;
-  text-align: center;
-  color: #333;
-}
-
-.contact h2 {
-  font-size: 2rem;
-  color: #0a9396;
-  margin-bottom: 10px;
-}
-
-.contact p {
-  font-size: 1rem;
-  margin-bottom: 10px;
-}
-
-.contact-info p {
-  font-size: 1.1rem;
-  margin: 5px 0;
-}
-
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -316,6 +96,7 @@
       <button type="submit">📤 Submit Story</button>
     </form>
   </section>
+
   <section class="contact">
     <h2>📞 Contact Us</h2>
     <p>We’d love to connect with you! Reach out for suggestions, feedback, or collaborations.</p>
@@ -347,4 +128,3 @@
   </script>
 </body>
 </html>
-
